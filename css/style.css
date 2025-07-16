@@ -1121,6 +1121,7 @@ a[href*='tel'], a[href*='mailto'] {
 	line-height: 0.8;
 	background-size: cover;
 	background-position: center center;
+  background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: #1b1b1b;
@@ -1949,7 +1950,6 @@ img {
 	display: inline-block;
 	font-weight: 400;
 	font-style: normal;
-	speak: none;
 	text-transform: none;
 }
 
@@ -2435,6 +2435,7 @@ input:-webkit-autofill ~ .form-validation {
 	background-color: transparent;
 	background-image: none;
 	border-radius: 0;
+  appearance: none;
 	-webkit-appearance: none;
 	transition: .3s ease-in-out;
 	border: 0;
@@ -2738,6 +2739,7 @@ textarea.form-input {
 
 .toggle-custom {
 	padding-left: 60px;
+  appearance: none;
 	-webkit-appearance: none;
 }
 
@@ -3905,9 +3907,9 @@ textarea.form-input {
 }
 
 .snackbars-right {
-	display: inline-block;
-	float: right;
-	text-transform: uppercase;
+    float: right; /* Mantemos o float para alinhar à direita */
+    text-transform: uppercase;
+    /* Removemos o display: inline-block; pois ele é ignorado quando float é usado */
 }
 
 .snackbars-right:hover {
@@ -4198,6 +4200,7 @@ textarea.form-input {
 	letter-spacing: 0.05em;
 	background: linear-gradient(0deg, transparent, transparent);
 	background: -webkit-linear-gradient(0deg, #be985f, #ff4141, #ffeb38);
+  background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: #ffeb38;
@@ -5705,11 +5708,13 @@ html:not(.lt-ie10) .not-animated {
 @-webkit-keyframes fadeInUp {
 	0% {
 		opacity: 0;
+  transform: none;
 		-webkit-transform: translate3d(0, 60px, 0);
 		transform: translate3d(0, 60px, 0);
 	}
 	100% {
 		opacity: 1;
+  transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
@@ -5718,11 +5723,13 @@ html:not(.lt-ie10) .not-animated {
 @keyframes fadeInUp {
 	0% {
 		opacity: 0;
+  transform: none;
 		-webkit-transform: translate3d(0, 60px, 0);
 		transform: translate3d(0, 60px, 0);
 	}
 	100% {
 		opacity: 1;
+  transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
@@ -5736,11 +5743,13 @@ html:not(.lt-ie10) .not-animated {
 @-webkit-keyframes fadeInDown {
 	0% {
 		opacity: 0;
+  transform: none;
 		-webkit-transform: translate3d(0, -100%, 0);
 		transform: translate3d(0, -100%, 0);
 	}
 	100% {
 		opacity: 1;
+  transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
@@ -5749,11 +5758,13 @@ html:not(.lt-ie10) .not-animated {
 @keyframes fadeInDown {
 	0% {
 		opacity: 0;
+  transform: none;
 		-webkit-transform: translate3d(0, -100%, 0);
 		transform: translate3d(0, -100%, 0);
 	}
 	100% {
 		opacity: 1;
+  transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
@@ -5767,11 +5778,13 @@ html:not(.lt-ie10) .not-animated {
 @-webkit-keyframes fadeInLeft {
 	0% {
 		opacity: 0;
+  transform: none;
 		-webkit-transform: translate3d(-100%, 0, 0);
 		transform: translate3d(-100%, 0, 0);
 	}
 	100% {
 		opacity: 1;
+  transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
@@ -5780,11 +5793,13 @@ html:not(.lt-ie10) .not-animated {
 @keyframes fadeInLeft {
 	0% {
 		opacity: 0;
+  transform: none;
 		-webkit-transform: translate3d(-100%, 0, 0);
 		transform: translate3d(-100%, 0, 0);
 	}
 	100% {
 		opacity: 1;
+  transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
@@ -5798,11 +5813,13 @@ html:not(.lt-ie10) .not-animated {
 @-webkit-keyframes fadeInRight {
 	0% {
 		opacity: 0;
+  transform: none;
 		-webkit-transform: translate3d(100%, 0, 0);
 		transform: translate3d(100%, 0, 0);
 	}
 	100% {
 		opacity: 1;
+  transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
@@ -5811,11 +5828,13 @@ html:not(.lt-ie10) .not-animated {
 @keyframes fadeInRight {
 	0% {
 		opacity: 0;
+  transform: none;
 		-webkit-transform: translate3d(100%, 0, 0);
 		transform: translate3d(100%, 0, 0);
 	}
 	100% {
 		opacity: 1;
+  transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
@@ -5851,11 +5870,13 @@ html:not(.lt-ie10) .not-animated {
 
 @-webkit-keyframes slideInDown {
 	0% {
+  transform: none;
 		-webkit-transform: translate3d(0, -100%, 0);
 		transform: translate3d(0, -100%, 0);
 		visibility: visible;
 	}
 	100% {
+  transform: none;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
@@ -5863,11 +5884,13 @@ html:not(.lt-ie10) .not-animated {
 
 @keyframes slideInDown {
 	0% {
+  transform: none;
 		-webkit-transform: translate3d(0, -100%, 0);
 		transform: translate3d(0, -100%, 0);
 		visibility: visible;
 	}
 	100% {
+  transform: none;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
@@ -5880,11 +5903,13 @@ html:not(.lt-ie10) .not-animated {
 
 @-webkit-keyframes slideInLeft {
 	0% {
+  transform: none;
 		-webkit-transform: translate3d(-100%, 0, 0);
 		transform: translate3d(-100%, 0, 0);
 		visibility: visible;
 	}
 	100% {
+  transform: none;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
@@ -5892,11 +5917,13 @@ html:not(.lt-ie10) .not-animated {
 
 @keyframes slideInLeft {
 	0% {
+  transform: none;
 		-webkit-transform: translate3d(-100%, 0, 0);
 		transform: translate3d(-100%, 0, 0);
 		visibility: visible;
 	}
 	100% {
+  transform: none;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
@@ -5909,11 +5936,13 @@ html:not(.lt-ie10) .not-animated {
 
 @-webkit-keyframes slideInRight {
 	0% {
+  transform: none;
 		-webkit-transform: translate3d(100%, 0, 0);
 		transform: translate3d(100%, 0, 0);
 		visibility: visible;
 	}
 	100% {
+  transform: none;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
@@ -5921,11 +5950,13 @@ html:not(.lt-ie10) .not-animated {
 
 @keyframes slideInRight {
 	0% {
+  transform: none;
 		-webkit-transform: translate3d(100%, 0, 0);
 		transform: translate3d(100%, 0, 0);
 		visibility: visible;
 	}
 	100% {
+  transform: none;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
@@ -5938,11 +5969,13 @@ html:not(.lt-ie10) .not-animated {
 
 @-webkit-keyframes slideOutDown {
 	0% {
+  transform: none;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
 	100% {
 		visibility: hidden;
+  transform: none;
 		-webkit-transform: translate3d(0, 100%, 0);
 		transform: translate3d(0, 100%, 0);
 	}
@@ -5950,11 +5983,13 @@ html:not(.lt-ie10) .not-animated {
 
 @keyframes slideOutDown {
 	0% {
+  transform: none;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
 	100% {
 		visibility: hidden;
+  transform: none;
 		-webkit-transform: translate3d(0, 100%, 0);
 		transform: translate3d(0, 100%, 0);
 	}
@@ -6202,11 +6237,13 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-toggle.active span:before {
+  transform: none;
 	-webkit-transform: rotate3d(0, 0, 1, -40deg);
 	transform: rotate3d(0, 0, 1, -40deg);
 }
 
 .rd-navbar-toggle.active span:after {
+  transform: none;
 	-webkit-transform: rotate3d(0, 0, 1, 40deg);
 	transform: rotate3d(0, 0, 1, 40deg);
 }
@@ -6306,6 +6343,7 @@ html.tablet .ui-to-top {
 	outline: none;
 	outline-offset: 0;
 	cursor: pointer;
+  appearance: none;
 	-webkit-appearance: none;
 }
 
@@ -7797,6 +7835,7 @@ html.rd-navbar-fixed-linked .page {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+  transform: none;
 	-webkit-transition-property: -webkit-transform;
 	transition-property: -webkit-transform;
 	-o-transition-property: transform;
@@ -7808,6 +7847,7 @@ html.rd-navbar-fixed-linked .page {
 
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
+  transform: none;
 	-webkit-transform: translate3d(0px, 0, 0);
 	transform: translate3d(0px, 0, 0);
 }
@@ -7832,6 +7872,7 @@ html.rd-navbar-fixed-linked .page {
 	width: 100%;
 	height: 100%;
 	position: relative;
+  transform: none;
 	-webkit-transition-property: -webkit-transform;
 	transition-property: -webkit-transform;
 	-o-transition-property: transform;
@@ -7856,6 +7897,7 @@ html.rd-navbar-fixed-linked .page {
 	-webkit-align-items: flex-start;
 	-ms-flex-align: start;
 	align-items: flex-start;
+  transform: none;
 	-webkit-transition-property: height, -webkit-transform;
 	transition-property: height, -webkit-transform;
 	-o-transition-property: transform, height;
@@ -7865,6 +7907,7 @@ html.rd-navbar-fixed-linked .page {
 
 /* 3D Effects */
 .swiper-container-3d {
+  perspective: 1000px;
 	-webkit-perspective: 1200px;
 	perspective: 1200px;
 }
@@ -7876,6 +7919,7 @@ html.rd-navbar-fixed-linked .page {
 .swiper-container-3d .swiper-slide-shadow-top,
 .swiper-container-3d .swiper-slide-shadow-bottom,
 .swiper-container-3d .swiper-cube-shadow {
+  transform: none;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
@@ -7997,6 +8041,7 @@ html.rd-navbar-fixed-linked .page {
 	-webkit-transition: 300ms opacity;
 	-o-transition: 300ms opacity;
 	transition: 300ms opacity;
+  transform: none;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 	z-index: 10;
@@ -8022,6 +8067,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transform: none;
 	-webkit-transform: scale(0.33);
 	-ms-transform: scale(0.33);
 	transform: scale(0.33);
@@ -8029,36 +8075,42 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+  transform: none;
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+  transform: none;
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+  transform: none;
 	-webkit-transform: scale(0.66);
 	-ms-transform: scale(0.66);
 	transform: scale(0.66);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+  transform: none;
 	-webkit-transform: scale(0.33);
 	-ms-transform: scale(0.33);
 	transform: scale(0.33);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+  transform: none;
 	-webkit-transform: scale(0.66);
 	-ms-transform: scale(0.66);
 	transform: scale(0.66);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+  transform: none;
 	-webkit-transform: scale(0.33);
 	-ms-transform: scale(0.33);
 	transform: scale(0.33);
@@ -8079,6 +8131,7 @@ button.swiper-pagination-bullet {
 	padding: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+  appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -8096,6 +8149,7 @@ button.swiper-pagination-bullet {
 .swiper-container-vertical > .swiper-pagination-bullets {
 	right: 10px;
 	top: 50%;
+  transform: none;
 	-webkit-transform: translate3d(0px, -50%, 0);
 	transform: translate3d(0px, -50%, 0);
 }
@@ -8107,6 +8161,7 @@ button.swiper-pagination-bullet {
 
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
 	top: 50%;
+  transform: none;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
@@ -8115,6 +8170,7 @@ button.swiper-pagination-bullet {
 
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
 	display: inline-block;
+  transform: none;
 	-webkit-transition: 200ms top, 200ms -webkit-transform;
 	transition: 200ms top, 200ms -webkit-transform;
 	-o-transition: 200ms transform, 200ms top;
@@ -8128,6 +8184,7 @@ button.swiper-pagination-bullet {
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
 	left: 50%;
+  transform: none;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
@@ -8135,6 +8192,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transform: none;
 	-webkit-transition: 200ms left, 200ms -webkit-transform;
 	transition: 200ms left, 200ms -webkit-transform;
 	-o-transition: 200ms transform, 200ms left;
@@ -8143,6 +8201,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transform: none;
 	-webkit-transition: 200ms right, 200ms -webkit-transform;
 	transition: 200ms right, 200ms -webkit-transform;
 	-o-transition: 200ms transform, 200ms right;
@@ -8163,6 +8222,7 @@ button.swiper-pagination-bullet {
 	top: 0;
 	width: 100%;
 	height: 100%;
+  transform: none;
 	-webkit-transform: scale(0);
 	-ms-transform: scale(0);
 	transform: scale(0);
@@ -8172,6 +8232,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  transform: none;
 	-webkit-transform-origin: right top;
 	-ms-transform-origin: right top;
 	transform-origin: right top;
@@ -8304,6 +8365,7 @@ button.swiper-pagination-bullet {
 	margin-left: -21px;
 	margin-top: -21px;
 	z-index: 10;
+  transform: none;
 	-webkit-transform-origin: 50%;
 	-ms-transform-origin: 50%;
 	transform-origin: 50%;
@@ -8328,6 +8390,7 @@ button.swiper-pagination-bullet {
 
 @-webkit-keyframes swiper-preloader-spin {
 	100% {
+  transform: none;
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
@@ -8335,6 +8398,7 @@ button.swiper-pagination-bullet {
 
 @keyframes swiper-preloader-spin {
 	100% {
+  transform: none;
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
@@ -8382,6 +8446,7 @@ button.swiper-pagination-bullet {
 	backface-visibility: hidden;
 	z-index: 1;
 	visibility: hidden;
+  transform: none;
 	-webkit-transform-origin: 0 0;
 	-ms-transform-origin: 0 0;
 	transform-origin: 0 0;
@@ -8394,6 +8459,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-cube.swiper-container-rtl .swiper-slide {
+  transform: none;
 	-webkit-transform-origin: 100% 0;
 	-ms-transform-origin: 100% 0;
 	transform-origin: 100% 0;
@@ -8858,6 +8924,7 @@ button.swiper-pagination-bullet {
 	outline: none;
 	outline-offset: 0;
 	cursor: pointer;
+  appearance: none;
 	-webkit-appearance: none;
 	position: absolute;
 	top: 0;
@@ -9744,6 +9811,7 @@ button.swiper-pagination-bullet {
 	position: relative;
 	overflow: hidden;
 	/* fix for flashing background */
+  transform: none;
 	-webkit-transform: translate3d(0px, 0px, 0px);
 }
 
